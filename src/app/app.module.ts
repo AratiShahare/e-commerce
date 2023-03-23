@@ -9,6 +9,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { SearchproductComponent } from './searchproduct/searchproduct.component';
 import { SellerAuthenComponent } from './seller-authen/seller-authen.component';
 import { SellerHomeComponent } from './seller-home/seller-home.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,9 @@ import { SellerHomeComponent } from './seller-home/seller-home.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
