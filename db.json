@@ -1,0 +1,22 @@
+{
+  "seller": [
+    {
+      "name": "arti shahare",
+      "email": "artishahare00@gmail.com",
+      "password": "12345",
+      "id": 1
+    },
+    {
+      "name": "Rahul shahare",
+      "password": "abc123",
+      "email": "arti@gmail.com",
+      "id": 2
+    },
+    {
+      "name": "abc shahare",
+      "password": "abc123",
+      "email": "arti@gmail.com",
+      "id": 3
+    }
+  ]
+}

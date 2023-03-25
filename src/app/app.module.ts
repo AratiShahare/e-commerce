@@ -9,7 +9,8 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { SearchproductComponent } from './searchproduct/searchproduct.component';
 import { SellerAuthenComponent } from './seller-authen/seller-authen.component';
 import { SellerHomeComponent } from './seller-home/seller-home.component';
-import { FormsModule } from '@angular/forms';
+import {  FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule} from '@angular/common/http'
 
 @NgModule({
   declarations: [
@@ -19,12 +20,16 @@ import { FormsModule } from '@angular/forms';
     NavbarComponent,
     SearchproductComponent,
     SellerAuthenComponent,
-    SellerHomeComponent
+    SellerHomeComponent,
+   
+   
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule
     
   ],
   providers: [],

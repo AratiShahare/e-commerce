@@ -1,140 +1,118 @@
-<!-- <div class="container">
-    <div class="row">
-        <div class="col">
-            <form class="form-1" >
-                <h5 style="padding-bottom: 40px;">Seller Login</h5>
-                <div class="form-group" style="padding-bottom: 40px;">
-                  
-                    <input type="email" class="form-control" placeholder="Email Id">
-                </div>
-                <div class="form-group" >
-                  
-                    <input type="password" class="form-control" placeholder="Password" >
-                </div>
 
-              <div>
-                <button type="button" >Login</button>
-              </div>
-            </form>
-        </div>
-    </div>
-</div>
- -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
+<!-- login -->
+<div class="card m-4" *ngIf="!showLogin">
   <div class="container">
-    <div class="row">
-      <div class="col">
-    <form class="form-1">
-        <h5 style="padding-bottom: 40px;">Seller Login</h5>
-        <div class="form-group" style="padding-bottom: 40px;">
-                  
-            <input type="email" class="form-control" placeholder="Email Id">
-        </div>
+    <div class="row py-4">
+      <div class="col-6">
+        <img src="/assets/image/sho.jpg" alt="" style="margin-left: 260px;padding: 20px;height: 380px;width: 420px;">
 
-         <!-- validation
+      </div>
+      <div class="col-6">
+        <form class="form-1" [formGroup]="login">
+          <h5 style="padding-bottom: 40px;">Seller Login</h5>
+          <div class="form-group" style="padding-bottom: 40px;">
+
+            <input type="email" class="form-control" placeholder="Email Id" name="email">
+          </div>
+
+          <!-- validation
          <small style="margin-left: 30px;" class="text-danger" 
          *ngIf="login.get('email')?.invalid && login.get('email')?.touched">
           enter valid email </small> -->
-     
-     
-          <div class="form-group" >
-                  
-            <input type="password" class="form-control" placeholder="Password" >
-        </div>
-      
-       <!-- validation
+
+
+          <div class="form-group">
+
+            <input type="password" class="form-control" placeholder="Password" name="password">
+          </div>
+
+          <!-- validation
        <small style="margin-left: 30px;" class="text-danger" 
        *ngIf="login.get('pwd')?.invalid && login.get('pwd')?.touched">
         enter valid password</small> -->
 
-  
 
-      <button >Login</button>
-      
-  <div class="link ">
-  
-  
-    <span style="margin-left: 80px;">New User? &nbsp;<a [routerLink]="['register']" id="rg">signup</a></span>
 
+          <button (click)="loginSeller()">Login</button>
+
+          <div class="link ">
+
+
+            <span style="margin-left: 80px;">New User? &nbsp;<a [routerLink]="['register']" id="rg"
+                (click)=" openSignup()">signup</a></span>
+
+
+
+          </div>
+
+        </form>
+      </div>
+
+    </div>
+
+  </div>
 
 
 </div>
-      
-</form>
-</div>
-</div>
-</div> 
-
-
-
 
 
 
 
 <!-- sign up -->
-  
-<div class="container">
-    <div class="row">
-      <div class="col">
-    <form class="form-1">
+
+<div class="container" *ngIf="showLogin">
+  <div class="row py-4">
+    <div class="col-6">
+      <img src="/assets/image/sho.jpg" alt="" style="margin-left: 260px;padding: 20px;height: 470px;width: 420px;">
+
+    </div>
+    <div class="col-6">
+      <form class="form-1" [formGroup]="signUp">
         <h5 style="padding-bottom: 40px;">Sign Up</h5>
 
         <div class="form-group" style="padding-bottom: 40px;">
-                  
-            <input type="Name" class="form-control" placeholder="Name" >
+
+          <input type="Name" class="form-control" placeholder="Name" formControlName="name" name="name">
         </div>
 
         <div class="form-group" style="padding-bottom: 40px;">
-                  
-            <input type="email" class="form-control" placeholder="Email Id">
+
+          <input type="email" class="form-control" placeholder="Email Id" formControlName="email" name="email">
         </div>
 
-         <!-- validation
+        <!-- validation
          <small style="margin-left: 30px;" class="text-danger" 
          *ngIf="login.get('email')?.invalid && login.get('email')?.touched">
           enter valid email </small> -->
-     
-     
-          <div class="form-group" >
-                  
-            <input type="password" class="form-control" placeholder="Password" >
+
+
+        <div class="form-group">
+
+          <input type="password" class="form-control" placeholder="Password" formControlName="password" name="password">
         </div>
-      
-       <!-- validation
+
+        <!-- validation
        <small style="margin-left: 30px;" class="text-danger" 
        *ngIf="login.get('pwd')?.invalid && login.get('pwd')?.touched">
         enter valid password</small> -->
 
-  
-
-      <button >Submit</button>
-      
-  <div class="link ">
-  
-  
-    <span>already have an acc? &nbsp;<a [routerLink]="['register']" id="rg">click to login</a></span>
 
 
+        <button (click)="userSignup(signUp.value)">Submit</button>
 
-</div>
-      
-</form>
+        <div class="link ">
 
-</div>
-</div> 
+
+          <span>already have an acc? &nbsp;
+            <a [routerLink]="['register']" id="rg" (click)="openLogin()">click to
+              login</a>
+          </span>
+
+
+
+        </div>
+
+      </form>
+
+    </div>
+  </div>
