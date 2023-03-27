@@ -17,6 +17,16 @@
       "password": "abc123",
       "email": "arti@gmail.com",
       "id": 3
+    },
+    {
+      "email": null,
+      "password": null,
+      "id": 4
+    },
+    {
+      "email": null,
+      "password": null,
+      "id": 5
     }
   ]
 }

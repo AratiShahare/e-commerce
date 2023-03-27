@@ -31,7 +31,7 @@ export class SellerAuthenComponent implements OnInit{
 
    ngOnInit(): void {
    
-    // this.seller.reloadSeller() 
+     this.seller.reloadSeller() 
   }
 
   userSignup(Body:any){

@@ -24,4 +24,8 @@ export class SellerService {
      return this.http.get(`http://localhost:3000/seller?email=${body.email}&password=${body.password}`).subscribe((res:any)=>
      console.log(res))
   }
+
+  reloadSeller() {
+    
+  }
 }
