@@ -13,14 +13,14 @@ export class SellerAuthenComponent implements OnInit{
    showLogin=false
 
    login= new FormGroup({
-    'email':new FormControl ( ),
-    'password':new FormControl( )
+    email:new FormControl ( ),
+    password:new FormControl( )
    })
 
    signUp=new FormGroup({
-    'name':new FormControl( ),
-    'email':new FormControl( ),
-    'password':new FormControl( )
+    name:new FormControl( ),
+    email:new FormControl( ),
+    password:new FormControl( )
    })
 
 
@@ -34,15 +34,17 @@ export class SellerAuthenComponent implements OnInit{
      this.seller.reloadSeller() 
   }
 
-  userSignup(Body:any){
-    this.seller.signUp(this.login.value)
-  
-  }
 
 
   loginSeller(){
-    this.seller.login(this.signUp.value)
+    this.seller.login(this.login.value)
   }
+
+  userSignup(){
+    this.seller.signUp(this.signUp.value)
+  
+  }
+
 
   openLogin(){
     this.showLogin=false
