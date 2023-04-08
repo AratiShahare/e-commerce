@@ -1,11 +1,13 @@
 import { HttpClient } from '@angular/common/http';
 import{ Injectable } from '@angular/core';
 import { Router } from '@angular/router';
+import { BehaviorSubject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class SellerService {
+  isSellerLoggedIn=new BehaviorSubject<boolean>(false);
 
   constructor(private http:HttpClient ,private router:Router) { }
 
@@ -15,7 +17,7 @@ export class SellerService {
     {console.log(res)
       
     if(res){
-      // this.isSellerLoggedIn.next(true)
+     this.isSellerLoggedIn.next(true)
       this.router.navigate(['sellerhome'])
     }
     })
@@ -28,6 +30,10 @@ export class SellerService {
    if(res.length){
     localStorage.setItem('seller',JSON.stringify(res))
     this.router.navigate(['sellerhome'])
+    alert("user logged in")
+   }
+   else{
+    alert("login failed")
    }
   })
 
@@ -35,7 +41,7 @@ export class SellerService {
 
   reloadSeller() {
     if(localStorage.getItem('seller')){
-      // this.isSellerLoggedIn.next(true)
+    this.isSellerLoggedIn.next(true)
     this.router.navigate(['sellerhome'])
     }
   }

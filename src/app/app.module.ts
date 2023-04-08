@@ -10,7 +10,8 @@ import { SearchproductComponent } from './searchproduct/searchproduct.component'
 import { SellerAuthenComponent } from './seller-authen/seller-authen.component';
 import { SellerHomeComponent } from './seller-home/seller-home.component';
 import {  FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule} from '@angular/common/http'
+import { HttpClientModule} from '@angular/common/http';
+import { ViewproductComponent } from './viewproduct/viewproduct.component'
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { HttpClientModule} from '@angular/common/http'
     SearchproductComponent,
     SellerAuthenComponent,
     SellerHomeComponent,
+    ViewproductComponent,
    
    
   ],

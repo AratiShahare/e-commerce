@@ -6,13 +6,17 @@ import { HomeComponent } from './home/home.component';
 import { SearchproductComponent } from './searchproduct/searchproduct.component';
 import { SellerAuthenComponent } from './seller-authen/seller-authen.component';
 import { SellerHomeComponent } from './seller-home/seller-home.component';
+import { ViewproductComponent } from './viewproduct/viewproduct.component';
 
 const routes: Routes = [
   {
     path:'', component:HomeComponent
   },
   {
-    path:'addproduct', component:AddproductComponent
+    path:'addproduct', component:AddproductComponent , canActivate:[AuthGuard]
+  },
+  {
+   path:'viewproduct', component:ViewproductComponent
   },
   {
     path:'sellerhome', component:SellerHomeComponent, //canActivate:[AuthGuard]

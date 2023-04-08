@@ -1,1 +1,52 @@
-<p>addproduct works!</p>
+
+
+<div class="container" >
+    <div class="row py-4">
+       
+
+      <div class="col-6">
+        <form class="form-1" [formGroup]="addprod">
+          <h3 style="padding-bottom: 40px;">Add New Product</h3>
+  
+          <div class="form-group" style="padding-bottom: 20px;">
+  
+            <input type="text" class="form-control" placeholder="Enter Product Name" formControlName="EnterProductName" name="EnterProductName">
+          </div>
+  
+          <div class="form-group" style="padding-bottom: 20px;">
+  
+            <input type="text" class="form-control" placeholder="Enter Product Price" formControlName="EnterProductPrice" name="EnterProductPrice">
+          </div>
+  
+          <div class="form-group" style="padding-bottom: 20px;">
+  
+            <input type="text" class="form-control" placeholder="Enter Product Color" formControlName="EnterProductColor" name="EnterProductColor">
+          </div>
+  
+          <div class="form-group" style="padding-bottom: 20px;">
+  
+            <input type="text" class="form-control" placeholder="Enter Product Category" formControlName="EnterProductCategory" name="EnterProductCategory">
+          </div>
+  
+          <div class="form-group" style="padding-bottom: 20px;">
+  
+          
+                <textarea name="" id="" cols="10" rows="2" style="padding-bottom: 20px;"
+                class="form-control" placeholder="Enter Product Description" 
+                formControlName="EnterProductDescription" name="EnterProductDescription"></textarea>
+          </div>
+          
+          <div class="form-group" style="padding-bottom: 20px;">
+  
+            <input type="text" class="form-control" placeholder="Enter Product Image URL" formControlName="EnterProductImage" name="EnterProductImage">
+          </div>
+  
+  
+         <div>
+            <button (click)="addbuutton()">Add Product</button>
+         </div>
+  
+        </form>
+  
+      </div>
+    </div>
